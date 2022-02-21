@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/fuki/src/j-base-clustring/build",
+  "command": "/usr/bin/clang++  -isystem /usr/local/Cellar/opencv/4.5.4_3/include/opencv4 -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++11 -o CMakeFiles/j-base-clustring.dir/src/Jclustring.cpp.o -c /Users/fuki/src/j-base-clustring/src/Jclustring.cpp",
+  "file": "/Users/fuki/src/j-base-clustring/src/Jclustring.cpp"
+},
+{
+  "directory": "/Users/fuki/src/j-base-clustring/build",
+  "command": "/usr/bin/clang++  -isystem /usr/local/Cellar/opencv/4.5.4_3/include/opencv4 -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++11 -o CMakeFiles/j-base-clustring.dir/src/main.cpp.o -c /Users/fuki/src/j-base-clustring/src/main.cpp",
+  "file": "/Users/fuki/src/j-base-clustring/src/main.cpp"
+}
+]

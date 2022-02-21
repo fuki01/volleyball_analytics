@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		17B29B6B5C20497FA3AB6632 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9D1DC3DE1EAF4029B33D606E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				6AAF3FD8780719B993D7296E /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				9505599401204E51B21E3E77 /* PBXTargetDependency */,
+				824EFCEB1C684FDD83AFFD27 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		B5F9D53028A44B17BA96CF0C /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 22C28D73719643FAA05BBC4A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				5BC09E1A8F311609FACA16CC /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		3454C7CC9BCA4A0C9D16053E /* /Users/fuki/src/j-base-clustring/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 15DF2C4B921641C69A3084BF /* /Users/fuki/src/j-base-clustring/src/main.cpp */; };
+		5B4EC23CCC8B4EC7B2609F55 /* /Users/fuki/src/j-base-clustring/src/Jclustring.hpp */ = {isa = PBXBuildFile; fileRef = 23BAEE40614B4C7FA17123F6 /* /Users/fuki/src/j-base-clustring/src/Jclustring.hpp */; };
+		A5F37D5C91524617B34D892E /* /Users/fuki/src/j-base-clustring/src/Jclustring.cpp */ = {isa = PBXBuildFile; fileRef = 7A343382C05F4B2E83468904 /* /Users/fuki/src/j-base-clustring/src/Jclustring.cpp */; };
+		D187701E1CE647A699AA9F3F /* /Users/fuki/src/j-base-clustring/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 9A869FE75D014A9C8312FF01 /* /Users/fuki/src/j-base-clustring/CMakeLists.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		00D8018B08F046AEAD307879 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		15364AA6CA1648C3A4F6058A /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		40432CA7AF4D4FB59BA221D8 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		A6186453DBFC4A2D9EB6A39F /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		2FFD42C6F51A42AFBC194962 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1579AC36F0F04AADB956B027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5F9D53028A44B17BA96CF0C;
+			remoteInfo = ZERO_CHECK;
+		};
+		8740CBC9BCA141F7A9D0CD8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1579AC36F0F04AADB956B027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5F9D53028A44B17BA96CF0C;
+			remoteInfo = ZERO_CHECK;
+		};
+		AD9D7F6ED8FC416DA7E79B83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1579AC36F0F04AADB956B027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18511388FA9E411BA4B5B7E4;
+			remoteInfo = "j-base-clustring";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15DF2C4B921641C69A3084BF /* /Users/fuki/src/j-base-clustring/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		23BAEE40614B4C7FA17123F6 /* /Users/fuki/src/j-base-clustring/src/Jclustring.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Jclustring.hpp; path = src/Jclustring.hpp; sourceTree = SOURCE_ROOT; };
+		56659E9E19D84FBB8CC834C4 /* j-base-clustring */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "j-base-clustring"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A343382C05F4B2E83468904 /* /Users/fuki/src/j-base-clustring/src/Jclustring.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Jclustring.cpp; path = src/Jclustring.cpp; sourceTree = SOURCE_ROOT; };
+		92EC68D1051542C58C872AEE /* /Users/fuki/src/j-base-clustring/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9A869FE75D014A9C8312FF01 /* /Users/fuki/src/j-base-clustring/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAF0CD33D3D5426F9CCEC0D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DC268FC552E4FAF811F594E /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				23BAEE40614B4C7FA17123F6 /* /Users/fuki/src/j-base-clustring/src/Jclustring.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		62C9C6C053E1481FA0DA57A1 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A343382C05F4B2E83468904 /* /Users/fuki/src/j-base-clustring/src/Jclustring.cpp */,
+				15DF2C4B921641C69A3084BF /* /Users/fuki/src/j-base-clustring/src/main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		761FD61A4BA64ACCB8EB7086 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56659E9E19D84FBB8CC834C4 /* j-base-clustring */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CF65751F7864F1BA62A8674 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				B1AAC7B2E54A4E5B9EEBFB8F /* CMake Rules */,
+				92EC68D1051542C58C872AEE /* /Users/fuki/src/j-base-clustring/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		B1AAC7B2E54A4E5B9EEBFB8F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		B298A7F9CF5844DF9A558C7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C687451FFB2A41F68BB2ED72 /* j-base-clustring */ = {
+			isa = PBXGroup;
+			children = (
+				62C9C6C053E1481FA0DA57A1 /* Source Files */,
+				1DC268FC552E4FAF811F594E /* Header Files */,
+				9A869FE75D014A9C8312FF01 /* /Users/fuki/src/j-base-clustring/CMakeLists.txt */,
+			);
+			name = "j-base-clustring";
+			sourceTree = "<group>";
+		};
+		D7AE2F94DD2E4F17B2A7965B = {
+			isa = PBXGroup;
+			children = (
+				C687451FFB2A41F68BB2ED72 /* j-base-clustring */,
+				8CF65751F7864F1BA62A8674 /* ALL_BUILD */,
+				761FD61A4BA64ACCB8EB7086 /* Products */,
+				B298A7F9CF5844DF9A558C7F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18511388FA9E411BA4B5B7E4 /* j-base-clustring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB5DC7B6C0B34A8FB2F15861 /* Build configuration list for PBXNativeTarget "j-base-clustring" */;
+			buildPhases = (
+				15F6CAA0A18C4300AA8717F1 /* Sources */,
+				FAF0CD33D3D5426F9CCEC0D5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A27DE7F8CCC24FF191874B9E /* PBXTargetDependency */,
+			);
+			name = "j-base-clustring";
+			productName = "j-base-clustring";
+			productReference = 56659E9E19D84FBB8CC834C4 /* j-base-clustring */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1579AC36F0F04AADB956B027 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1320;
+			};
+			buildConfigurationList = 7ED3ED813DD040378B14C023 /* Build configuration list for PBXProject "j-base-clustring" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				40432CA7AF4D4FB59BA221D8 /* Debug */,
+				00D8018B08F046AEAD307879 /* Release */,
+				15364AA6CA1648C3A4F6058A /* MinSizeRel */,
+				A6186453DBFC4A2D9EB6A39F /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = D7AE2F94DD2E4F17B2A7965B;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				17B29B6B5C20497FA3AB6632 /* ALL_BUILD */,
+				B5F9D53028A44B17BA96CF0C /* ZERO_CHECK */,
+				18511388FA9E411BA4B5B7E4 /* j-base-clustring */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		5BC09E1A8F311609FACA16CC /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/fuki/src/j-base-clustring/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/fuki/src/j-base-clustring
+  make -f /Users/fuki/src/j-base-clustring/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/fuki/src/j-base-clustring
+  make -f /Users/fuki/src/j-base-clustring/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/fuki/src/j-base-clustring
+  make -f /Users/fuki/src/j-base-clustring/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/fuki/src/j-base-clustring
+  make -f /Users/fuki/src/j-base-clustring/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		6AAF3FD8780719B993D7296E /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/fuki/src/j-base-clustring/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/fuki/src/j-base-clustring
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/fuki/src/j-base-clustring
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/fuki/src/j-base-clustring
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/fuki/src/j-base-clustring
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15F6CAA0A18C4300AA8717F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5F37D5C91524617B34D892E /* /Users/fuki/src/j-base-clustring/src/Jclustring.cpp */,
+				3454C7CC9BCA4A0C9D16053E /* /Users/fuki/src/j-base-clustring/src/main.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		824EFCEB1C684FDD83AFFD27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5F9D53028A44B17BA96CF0C /* ZERO_CHECK */;
+			targetProxy = 8740CBC9BCA141F7A9D0CD8F /* PBXContainerItemProxy */;
+		};
+		9505599401204E51B21E3E77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18511388FA9E411BA4B5B7E4 /* j-base-clustring */;
+			targetProxy = AD9D7F6ED8FC416DA7E79B83 /* PBXContainerItemProxy */;
+		};
+		A27DE7F8CCC24FF191874B9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5F9D53028A44B17BA96CF0C /* ZERO_CHECK */;
+			targetProxy = 2FFD42C6F51A42AFBC194962 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02C5850403134EA382BA4DDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = "/Users/fuki/src/j-base-clustring/build";
+			};
+			name = Release;
+		};
+		299F076DED724D2A8850DEBC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		31584B78CC164EE7BC74BBB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/usr/local/lib/libopencv_gapi.4.5.4.dylib,/usr/local/lib/libopencv_stitching.4.5.4.dylib,/usr/local/lib/libopencv_alphamat.4.5.4.dylib,/usr/local/lib/libopencv_aruco.4.5.4.dylib,/usr/local/lib/libopencv_barcode.4.5.4.dylib,/usr/local/lib/libopencv_bgsegm.4.5.4.dylib,/usr/local/lib/libopencv_bioinspired.4.5.4.dylib,/usr/local/lib/libopencv_ccalib.4.5.4.dylib,/usr/local/lib/libopencv_dnn_objdetect.4.5.4.dylib,/usr/local/lib/libopencv_dnn_superres.4.5.4.dylib,/usr/local/lib/libopencv_dpm.4.5.4.dylib,/usr/local/lib/libopencv_face.4.5.4.dylib,/usr/local/lib/libopencv_freetype.4.5.4.dylib,/usr/local/lib/libopencv_fuzzy.4.5.4.dylib,/usr/local/lib/libopencv_hfs.4.5.4.dylib,/usr/local/lib/libopencv_img_hash.4.5.4.dylib,/usr/local/lib/libopencv_intensity_transform.4.5.4.dylib,/usr/local/lib/libopencv_line_descriptor.4.5.4.dylib,/usr/local/lib/libopencv_mcc.4.5.4.dylib,/usr/local/lib/libopencv_quality.4.5.4.dylib,/usr/local/lib/libopencv_rapid.4.5.4.dylib,/usr/local/lib/libopencv_reg.4.5.4.dylib,/usr/local/lib/libopencv_rgbd.4.5.4.dylib,/usr/local/lib/libopencv_saliency.4.5.4.dylib,/usr/local/lib/libopencv_sfm.4.5.4.dylib,/usr/local/lib/libopencv_stereo.4.5.4.dylib,/usr/local/lib/libopencv_structured_light.4.5.4.dylib,/usr/local/lib/libopencv_superres.4.5.4.dylib,/usr/local/lib/libopencv_surface_matching.4.5.4.dylib,/usr/local/lib/libopencv_tracking.4.5.4.dylib,/usr/local/lib/libopencv_videostab.4.5.4.dylib,/usr/local/lib/libopencv_viz.4.5.4.dylib,/usr/local/lib/libopencv_wechat_qrcode.4.5.4.dylib,/usr/local/lib/libopencv_xfeatures2d.4.5.4.dylib,/usr/local/lib/libopencv_xobjdetect.4.5.4.dylib,/usr/local/lib/libopencv_xphoto.4.5.4.dylib,/usr/local/lib/libopencv_shape.4.5.4.dylib,/usr/local/lib/libopencv_highgui.4.5.4.dylib,/usr/local/lib/libopencv_datasets.4.5.4.dylib,/usr/local/lib/libopencv_plot.4.5.4.dylib,/usr/local/lib/libopencv_text.4.5.4.dylib,/usr/local/lib/libopencv_ml.4.5.4.dylib,/usr/local/lib/libopencv_phase_unwrapping.4.5.4.dylib,/usr/local/lib/libopencv_optflow.4.5.4.dylib,/usr/local/lib/libopencv_ximgproc.4.5.4.dylib,/usr/local/lib/libopencv_video.4.5.4.dylib,/usr/local/lib/libopencv_videoio.4.5.4.dylib,/usr/local/lib/libopencv_imgcodecs.4.5.4.dylib,/usr/local/lib/libopencv_objdetect.4.5.4.dylib,/usr/local/lib/libopencv_calib3d.4.5.4.dylib,/usr/local/lib/libopencv_dnn.4.5.4.dylib,/usr/local/lib/libopencv_features2d.4.5.4.dylib,/usr/local/lib/libopencv_flann.4.5.4.dylib,/usr/local/lib/libopencv_photo.4.5.4.dylib,/usr/local/lib/libopencv_imgproc.4.5.4.dylib,/usr/local/lib/libopencv_core.4.5.4.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "j-base-clustring";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/opencv/4.5.4_3/include/opencv4,"$(inherited)");
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		3A2F07D7C31E42C896363E78 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = "/Users/fuki/src/j-base-clustring/build";
+			};
+			name = MinSizeRel;
+		};
+		49061A19FC674870A591CE5E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = "/Users/fuki/src/j-base-clustring/build";
+			};
+			name = RelWithDebInfo;
+		};
+		53D0545FED5549C5BFE97FD0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		6DF109A4957E4B9685D9DF17 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/usr/local/lib/libopencv_gapi.4.5.4.dylib,/usr/local/lib/libopencv_stitching.4.5.4.dylib,/usr/local/lib/libopencv_alphamat.4.5.4.dylib,/usr/local/lib/libopencv_aruco.4.5.4.dylib,/usr/local/lib/libopencv_barcode.4.5.4.dylib,/usr/local/lib/libopencv_bgsegm.4.5.4.dylib,/usr/local/lib/libopencv_bioinspired.4.5.4.dylib,/usr/local/lib/libopencv_ccalib.4.5.4.dylib,/usr/local/lib/libopencv_dnn_objdetect.4.5.4.dylib,/usr/local/lib/libopencv_dnn_superres.4.5.4.dylib,/usr/local/lib/libopencv_dpm.4.5.4.dylib,/usr/local/lib/libopencv_face.4.5.4.dylib,/usr/local/lib/libopencv_freetype.4.5.4.dylib,/usr/local/lib/libopencv_fuzzy.4.5.4.dylib,/usr/local/lib/libopencv_hfs.4.5.4.dylib,/usr/local/lib/libopencv_img_hash.4.5.4.dylib,/usr/local/lib/libopencv_intensity_transform.4.5.4.dylib,/usr/local/lib/libopencv_line_descriptor.4.5.4.dylib,/usr/local/lib/libopencv_mcc.4.5.4.dylib,/usr/local/lib/libopencv_quality.4.5.4.dylib,/usr/local/lib/libopencv_rapid.4.5.4.dylib,/usr/local/lib/libopencv_reg.4.5.4.dylib,/usr/local/lib/libopencv_rgbd.4.5.4.dylib,/usr/local/lib/libopencv_saliency.4.5.4.dylib,/usr/local/lib/libopencv_sfm.4.5.4.dylib,/usr/local/lib/libopencv_stereo.4.5.4.dylib,/usr/local/lib/libopencv_structured_light.4.5.4.dylib,/usr/local/lib/libopencv_superres.4.5.4.dylib,/usr/local/lib/libopencv_surface_matching.4.5.4.dylib,/usr/local/lib/libopencv_tracking.4.5.4.dylib,/usr/local/lib/libopencv_videostab.4.5.4.dylib,/usr/local/lib/libopencv_viz.4.5.4.dylib,/usr/local/lib/libopencv_wechat_qrcode.4.5.4.dylib,/usr/local/lib/libopencv_xfeatures2d.4.5.4.dylib,/usr/local/lib/libopencv_xobjdetect.4.5.4.dylib,/usr/local/lib/libopencv_xphoto.4.5.4.dylib,/usr/local/lib/libopencv_shape.4.5.4.dylib,/usr/local/lib/libopencv_highgui.4.5.4.dylib,/usr/local/lib/libopencv_datasets.4.5.4.dylib,/usr/local/lib/libopencv_plot.4.5.4.dylib,/usr/local/lib/libopencv_text.4.5.4.dylib,/usr/local/lib/libopencv_ml.4.5.4.dylib,/usr/local/lib/libopencv_phase_unwrapping.4.5.4.dylib,/usr/local/lib/libopencv_optflow.4.5.4.dylib,/usr/local/lib/libopencv_ximgproc.4.5.4.dylib,/usr/local/lib/libopencv_video.4.5.4.dylib,/usr/local/lib/libopencv_videoio.4.5.4.dylib,/usr/local/lib/libopencv_imgcodecs.4.5.4.dylib,/usr/local/lib/libopencv_objdetect.4.5.4.dylib,/usr/local/lib/libopencv_calib3d.4.5.4.dylib,/usr/local/lib/libopencv_dnn.4.5.4.dylib,/usr/local/lib/libopencv_features2d.4.5.4.dylib,/usr/local/lib/libopencv_flann.4.5.4.dylib,/usr/local/lib/libopencv_photo.4.5.4.dylib,/usr/local/lib/libopencv_imgproc.4.5.4.dylib,/usr/local/lib/libopencv_core.4.5.4.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "j-base-clustring";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/opencv/4.5.4_3/include/opencv4,"$(inherited)");
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7B101E11583446E494202E57 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		7D855B82B5DC40E287EB2EEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/usr/local/lib/libopencv_gapi.4.5.4.dylib,/usr/local/lib/libopencv_stitching.4.5.4.dylib,/usr/local/lib/libopencv_alphamat.4.5.4.dylib,/usr/local/lib/libopencv_aruco.4.5.4.dylib,/usr/local/lib/libopencv_barcode.4.5.4.dylib,/usr/local/lib/libopencv_bgsegm.4.5.4.dylib,/usr/local/lib/libopencv_bioinspired.4.5.4.dylib,/usr/local/lib/libopencv_ccalib.4.5.4.dylib,/usr/local/lib/libopencv_dnn_objdetect.4.5.4.dylib,/usr/local/lib/libopencv_dnn_superres.4.5.4.dylib,/usr/local/lib/libopencv_dpm.4.5.4.dylib,/usr/local/lib/libopencv_face.4.5.4.dylib,/usr/local/lib/libopencv_freetype.4.5.4.dylib,/usr/local/lib/libopencv_fuzzy.4.5.4.dylib,/usr/local/lib/libopencv_hfs.4.5.4.dylib,/usr/local/lib/libopencv_img_hash.4.5.4.dylib,/usr/local/lib/libopencv_intensity_transform.4.5.4.dylib,/usr/local/lib/libopencv_line_descriptor.4.5.4.dylib,/usr/local/lib/libopencv_mcc.4.5.4.dylib,/usr/local/lib/libopencv_quality.4.5.4.dylib,/usr/local/lib/libopencv_rapid.4.5.4.dylib,/usr/local/lib/libopencv_reg.4.5.4.dylib,/usr/local/lib/libopencv_rgbd.4.5.4.dylib,/usr/local/lib/libopencv_saliency.4.5.4.dylib,/usr/local/lib/libopencv_sfm.4.5.4.dylib,/usr/local/lib/libopencv_stereo.4.5.4.dylib,/usr/local/lib/libopencv_structured_light.4.5.4.dylib,/usr/local/lib/libopencv_superres.4.5.4.dylib,/usr/local/lib/libopencv_surface_matching.4.5.4.dylib,/usr/local/lib/libopencv_tracking.4.5.4.dylib,/usr/local/lib/libopencv_videostab.4.5.4.dylib,/usr/local/lib/libopencv_viz.4.5.4.dylib,/usr/local/lib/libopencv_wechat_qrcode.4.5.4.dylib,/usr/local/lib/libopencv_xfeatures2d.4.5.4.dylib,/usr/local/lib/libopencv_xobjdetect.4.5.4.dylib,/usr/local/lib/libopencv_xphoto.4.5.4.dylib,/usr/local/lib/libopencv_shape.4.5.4.dylib,/usr/local/lib/libopencv_highgui.4.5.4.dylib,/usr/local/lib/libopencv_datasets.4.5.4.dylib,/usr/local/lib/libopencv_plot.4.5.4.dylib,/usr/local/lib/libopencv_text.4.5.4.dylib,/usr/local/lib/libopencv_ml.4.5.4.dylib,/usr/local/lib/libopencv_phase_unwrapping.4.5.4.dylib,/usr/local/lib/libopencv_optflow.4.5.4.dylib,/usr/local/lib/libopencv_ximgproc.4.5.4.dylib,/usr/local/lib/libopencv_video.4.5.4.dylib,/usr/local/lib/libopencv_videoio.4.5.4.dylib,/usr/local/lib/libopencv_imgcodecs.4.5.4.dylib,/usr/local/lib/libopencv_objdetect.4.5.4.dylib,/usr/local/lib/libopencv_calib3d.4.5.4.dylib,/usr/local/lib/libopencv_dnn.4.5.4.dylib,/usr/local/lib/libopencv_features2d.4.5.4.dylib,/usr/local/lib/libopencv_flann.4.5.4.dylib,/usr/local/lib/libopencv_photo.4.5.4.dylib,/usr/local/lib/libopencv_imgproc.4.5.4.dylib,/usr/local/lib/libopencv_core.4.5.4.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "j-base-clustring";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/opencv/4.5.4_3/include/opencv4,"$(inherited)");
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		AA2717E93D2149B48950AE15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		AB6677A13E4041D7B92D6C72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		C49A998734434B5B876FAEBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		E2A1DA37E05440B58985F900 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/usr/local/lib/libopencv_gapi.4.5.4.dylib,/usr/local/lib/libopencv_stitching.4.5.4.dylib,/usr/local/lib/libopencv_alphamat.4.5.4.dylib,/usr/local/lib/libopencv_aruco.4.5.4.dylib,/usr/local/lib/libopencv_barcode.4.5.4.dylib,/usr/local/lib/libopencv_bgsegm.4.5.4.dylib,/usr/local/lib/libopencv_bioinspired.4.5.4.dylib,/usr/local/lib/libopencv_ccalib.4.5.4.dylib,/usr/local/lib/libopencv_dnn_objdetect.4.5.4.dylib,/usr/local/lib/libopencv_dnn_superres.4.5.4.dylib,/usr/local/lib/libopencv_dpm.4.5.4.dylib,/usr/local/lib/libopencv_face.4.5.4.dylib,/usr/local/lib/libopencv_freetype.4.5.4.dylib,/usr/local/lib/libopencv_fuzzy.4.5.4.dylib,/usr/local/lib/libopencv_hfs.4.5.4.dylib,/usr/local/lib/libopencv_img_hash.4.5.4.dylib,/usr/local/lib/libopencv_intensity_transform.4.5.4.dylib,/usr/local/lib/libopencv_line_descriptor.4.5.4.dylib,/usr/local/lib/libopencv_mcc.4.5.4.dylib,/usr/local/lib/libopencv_quality.4.5.4.dylib,/usr/local/lib/libopencv_rapid.4.5.4.dylib,/usr/local/lib/libopencv_reg.4.5.4.dylib,/usr/local/lib/libopencv_rgbd.4.5.4.dylib,/usr/local/lib/libopencv_saliency.4.5.4.dylib,/usr/local/lib/libopencv_sfm.4.5.4.dylib,/usr/local/lib/libopencv_stereo.4.5.4.dylib,/usr/local/lib/libopencv_structured_light.4.5.4.dylib,/usr/local/lib/libopencv_superres.4.5.4.dylib,/usr/local/lib/libopencv_surface_matching.4.5.4.dylib,/usr/local/lib/libopencv_tracking.4.5.4.dylib,/usr/local/lib/libopencv_videostab.4.5.4.dylib,/usr/local/lib/libopencv_viz.4.5.4.dylib,/usr/local/lib/libopencv_wechat_qrcode.4.5.4.dylib,/usr/local/lib/libopencv_xfeatures2d.4.5.4.dylib,/usr/local/lib/libopencv_xobjdetect.4.5.4.dylib,/usr/local/lib/libopencv_xphoto.4.5.4.dylib,/usr/local/lib/libopencv_shape.4.5.4.dylib,/usr/local/lib/libopencv_highgui.4.5.4.dylib,/usr/local/lib/libopencv_datasets.4.5.4.dylib,/usr/local/lib/libopencv_plot.4.5.4.dylib,/usr/local/lib/libopencv_text.4.5.4.dylib,/usr/local/lib/libopencv_ml.4.5.4.dylib,/usr/local/lib/libopencv_phase_unwrapping.4.5.4.dylib,/usr/local/lib/libopencv_optflow.4.5.4.dylib,/usr/local/lib/libopencv_ximgproc.4.5.4.dylib,/usr/local/lib/libopencv_video.4.5.4.dylib,/usr/local/lib/libopencv_videoio.4.5.4.dylib,/usr/local/lib/libopencv_imgcodecs.4.5.4.dylib,/usr/local/lib/libopencv_objdetect.4.5.4.dylib,/usr/local/lib/libopencv_calib3d.4.5.4.dylib,/usr/local/lib/libopencv_dnn.4.5.4.dylib,/usr/local/lib/libopencv_features2d.4.5.4.dylib,/usr/local/lib/libopencv_flann.4.5.4.dylib,/usr/local/lib/libopencv_photo.4.5.4.dylib,/usr/local/lib/libopencv_imgproc.4.5.4.dylib,/usr/local/lib/libopencv_core.4.5.4.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "j-base-clustring";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/opencv/4.5.4_3/include/opencv4,"$(inherited)");
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		EB79F8995B0B427AA127AE46 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EFF969AAAD5B411985F66956 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = "/Users/fuki/src/j-base-clustring/build";
+			};
+			name = Debug;
+		};
+		FDB7CBE2E6C5416987FF6180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fuki/src/j-base-clustring";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22C28D73719643FAA05BBC4A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA2717E93D2149B48950AE15 /* Debug */,
+				AB6677A13E4041D7B92D6C72 /* Release */,
+				7B101E11583446E494202E57 /* MinSizeRel */,
+				299F076DED724D2A8850DEBC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7ED3ED813DD040378B14C023 /* Build configuration list for PBXProject "j-base-clustring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFF969AAAD5B411985F66956 /* Debug */,
+				02C5850403134EA382BA4DDD /* Release */,
+				3A2F07D7C31E42C896363E78 /* MinSizeRel */,
+				49061A19FC674870A591CE5E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9D1DC3DE1EAF4029B33D606E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDB7CBE2E6C5416987FF6180 /* Debug */,
+				C49A998734434B5B876FAEBF /* Release */,
+				53D0545FED5549C5BFE97FD0 /* MinSizeRel */,
+				EB79F8995B0B427AA127AE46 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CB5DC7B6C0B34A8FB2F15861 /* Build configuration list for PBXNativeTarget "j-base-clustring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D855B82B5DC40E287EB2EEE /* Debug */,
+				31584B78CC164EE7BC74BBB9 /* Release */,
+				E2A1DA37E05440B58985F900 /* MinSizeRel */,
+				6DF109A4957E4B9685D9DF17 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1579AC36F0F04AADB956B027 /* Project object */;
+}
