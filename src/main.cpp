@@ -3,15 +3,17 @@
 #include "Jclustring.hpp"
 using namespace std;
 
-const std::string movie_path = "/Users/fuki/Desktop/volleballAnalysis/jbase_clustring/video.mp4";
-const std::string shot_path = "/Users/fuki/Desktop/volleballAnalysis/jbase_clustring/Cython/input/vide_shot_file.csv";
+//const std::string movie_path = "/Users/fuki/Desktop/volleballAnalysis/jbase_clustring/video.mp4";
+//const std::string shot_path = "/Users/fuki/Desktop/volleballAnalysis/jbase_clustring/Cython/input/vide_shot_file.csv";
 
 //const std::string movie_path = "/Users/fuki/Documents/実験動画/womens\ u20\ volleyball\ world\ chanps\ 2021\ video\ yolo/ARG\ vs\ THA\ -\ Full\ Match\ Round\ 2\ Womens\ U20\ Volleyball\ World\ Champs\ 2021.mp4";
 //const std::string shot_path = "/Users/fuki/Desktop/volleballAnalysis/shot_detection/result/ARG\ vs\ THA\ -\ Full\ Match\ Round\ 2\ Womens\ U20\ Volleyball\ World\ Champs\ 2021.mp4cut_frame.csv";
 
-//const std::string movie_path = "/Users/fuki/Desktop/video_oneset.mp4";
-//const std::string shot_path = "/Users/fuki/Desktop/volleballAnalysis/jbase_clustring/Cython/input/video_oneset.csv";
+const std::string movie_path = "/Users/fuki/Desktop/video_oneset.mp4";
+const std::string shot_path = "/Users/fuki/Desktop/volleballAnalysis/jbase_clustring/Cython/input/video_oneset.csv";
 
+//const std::string movie_path = "/Users/fuki/Desktop/video_oneset.mp4";
+//const std::string movie_path = "/Users/fuki/Documents/実験動画/womens u20 volleyball world chanps 2021 video yolo/ITA vs RUS - Full Semi-Final 1  Womens U20 Volleyball World Champs 2021.mp4"
 
 int main(int argc, const char * argv[]) {
     Jclustring jclustring(movie_path, shot_path, 5);

@@ -12,73 +12,205 @@ void Jclustring::run(){
     if(!t) return 0;
     this->read_shot_file();
     this->create_keyframe();
-    std::cout << "start init_histogram" << std::endl;
     this->init_histogram();
-    std::cout << "end init_histogram" << std::endl;
-    std::cout << "start combination_min" << std::endl;
-    cv::Point2i index = this->combination_min();
-    std::cout << "end combination_min" << std::endl;
     
-    int N = this->K.size();
-    this->Ni = this->K.size();
-    for (int i=0; i<N; i++) {
-        std::vector<float> center_hist = this->create_histogram(K[i][0][3]);
-        std::vector<float> avg_hist(256);
-        for (int l=0; l<5; l++) {
-            std::vector<float> hist = this->create_histogram(K[i][0][l]);
-            for (int j=0; j<256; j++) avg_hist[j] += hist[j];
+    while(true) {
+        this->JbaseClustring();
+        int min_index = 0;
+        double min_value = 1000;
+        for (int i=0; i<this->Jresult.size(); i++) {
+            if(min_value > this->Jresult[i]){
+                min_value = this->Jresult[i];
+                min_index = i;
+            }
         }
-        for (int j=0; j<256; j++) avg_hist[j] = avg_hist[j] / this->N;
-        this->divide += this->get_euclidean_distance(avg_hist, center_hist);
+        this->Jresult.clear();
+        std::cout << min_value << ", " << min_index << std::endl;
+        std::vector<std::vector<std::vector<float>>> cluster = this->save_clusters[min_index];
+        this->output(cluster);
+//        最適なクラスタ位置へS,H,Kを戻す．
+//        メモリ解放
+        S.clear();
+//        メモリ確保
+        for (int i=0; i<save_S[min_index].size(); i++) {
+            std::vector<int> tmp;
+            for (int j=0; j<save_S[min_index][i].size(); j++) tmp.push_back('null');
+            S.push_back(tmp);
+        }
+//        コピー
+        copy(save_S[min_index].begin(), save_S[min_index].end(), S.begin());
+//        メモリ解放
+        H.clear();
+//        メモリ確保
+        for (int i=0; i<save_H[min_index].size(); i++) {
+            std::vector<std::vector<float>> tmp_two;
+            for (int j=0; j<save_H[min_index][i].size(); j++) {
+                std::vector<float> tmp_one;
+                for (int h=0; h<save_H[min_index][i][j].size(); h++) tmp_one.push_back('null');
+                tmp_two.push_back(tmp_one);
+            }
+            H.push_back(tmp_two);
+        }
+//        コピー
+        copy(save_H[min_index].begin(), save_H[min_index].end(), H.begin());
+
+//        vecメモリの解放
+        K.clear();
+//        コピーするメモリ確保
+        for (int i=0; i<save_K[min_index].size(); i++) {
+            std::vector<std::vector<int>> tmp_two;
+            for (int j=0; j<save_K[min_index][i].size(); j++) {
+                std::vector<int> tmp_one;
+                for (int l=0; l<save_K[min_index][j].size(); l++) {
+                    tmp_one.push_back('null');
+                }
+                tmp_two.push_back(tmp_one);
+            }
+            K.push_back(tmp_two);
+        }
+//        コピー
+        copy(save_K[min_index].begin(), save_K[min_index].end(), K.begin());
+//        デバッグ用
+        std::cout << H.size() << " " << S.size() << " " << K.size() << std::endl;
+        this->clusters.clear();
+        this->save_clusters.clear();
     }
-    this->marge(index);
-    this->update_cluster();
+}
+
+void Jclustring::JbaseClustring(){
+    cv::Point2i index = this->combination_min();
+    this->Jinit(K.size());
+    this->Ni = this->K.size();
     int i = 0;
     while (true) {
         i++;
-        cv::Point2i index = this->combination_min();
-        this->marge(index);
+        this->end(index);
+        index = this->marge(index);
         this->update_cluster();
-        this->end_process(index.x);
-//        std::cout << i << std::÷endl;
-//        if (i == 17) break;
+//        std::cout << this->S.size() << std::endl;
         if (this->S.size() == 1) break;
-
+        if (this->S.size() == 50) break;
+        std::cout << this->S.size() << std::endl;
+        index = this->combination_min_index(index);
+        this->save_clusters.push_back(this->clusters);
+        this->save_S.push_back(this->S);
+        this->save_H.push_back(this->H);
+        this->save_K.push_back(this->K);
     }
-    
-    for (int i=0; i<this->clusters.size(); i++) {
-        for (int j=0; j<clusters[i].size(); j++) std::cout << clusters[i][j][0] << "〜" << clusters[i][j][4] << " | ";
-        std::cout << std::endl;
+}
+
+void Jclustring::output(std::vector<std::vector<std::vector<float>>> cluster){
+    for (int i=0; i<cluster.size(); i++) {
+        std::cout << "[" ;
+        for (int j=0; j<cluster[i].size(); j++){
+            if (j == cluster.size()) {
+                std::cout << cluster[i][j][0];
+            }else{
+                std::cout << cluster[i][j][0] << ",";
+            }
+        }
+        std::cout << "],";
+    }
+}
+
+void Jclustring::end(cv::Point2i index){
+    double divided  = 0.0;
+    int index_one = index.x;
+    int index_two = index.y;
+
+    std::vector<std::vector<std::vector<int>>> tmp;
+    tmp.push_back(K[index_one]);
+    tmp.push_back(K[index_two]);
+    for (int c=0; c<tmp.size(); c++) {
+        double sum = 0.0;
+        for (int i=0; i<tmp[c].size(); i++) {
+            std::vector<float> center_hist = this->create_histogram(tmp[c][i][3]);
+            std::vector<float> avg_hist(256);
+            for (int l=0; l<5; l++) {
+                std::vector<float> hist = this->create_histogram(tmp[c][i][l]);
+                for (int h=0; h<256; h++) avg_hist[h] += hist[h];
+            }
+            for (int h=0; h<256; h++) avg_hist[h] /= 5;
+            sum += this->get_euclidean_distance(center_hist, avg_hist);
+        }
+        divided += sum;
+    }
+
+    float kn = this->S.size() / this->Ni;
+//    std::cout << divided/this->divide << " " << kn << " " << divided/this->divide+kn  << std::endl;
+    this->Jresult.push_back(divided/this->divide+kn);
+}
+
+void Jclustring::Jinit(int N){
+    this->divide = 0;
+//    Nはショット数
+    for (int i=0; i<N; i++) {
+//        ショットの中心ヒストグラム
+        std::vector<float> center_hist = H[i][3];
+//        ショットの平均ヒストグラム
+        std::vector<float> avg_hist(256);
+        for (int h=0; h<H[i].size(); h++) for (int j=0; j<256; j++) avg_hist[j] += H[i][h][j];
+        for (int j=0; j<256; j++) avg_hist[j] /= H[i].size();
+//        距離を求める
+        this->divide += this->get_euclidean_distance(center_hist, avg_hist);
     }
 }
 
 void Jclustring::end_process(int index){
-    float divided = 0;
-    for (int c=0; c<this->clusters.size(); c++) {
-        float sum = 0.;
-        for (int i=0; i<clusters[c].size(); i++) {
-            std::vector<float> center_hist = create_histogram(clusters[c][i][3]);
+    double divided = 0;
+//    for (int c=0; c<K[index].size(); c++) {
+//        std::vector<float> center_hist = this->create_histogram(K[index][c][3]);
+////        ヒストグラム平均
+//        std::vector<float> avg_hist(256);
+//        for (int i=0; i<K[index][c].size(); i++) {
+//            std::vector<float> hist = this->create_histogram(K[index][c][i]);
+//            for (int l=0; l<256; l++) avg_hist[l] = avg_hist[l] + hist[l];
+//        }
+//        for (int i=0; i<256; i++) avg_hist[i] = avg_hist[i] / K[index][c].size();
+//        divided += this->get_euclidean_distance(center_hist, avg_hist);
+//    }
+    for (int c=0; c<S.size(); c++) {
+        double sum = 0.0;
+        for (int i=0; i<this->K[c].size(); i++) {
+            std::vector<float> center_hist = this->create_histogram(K[c][i][3]);
             std::vector<float> avg_hist(256);
-            
-            for (int l=0; l<5; l++) {
-                std::vector<float> hist = this->create_histogram(clusters[c][i][l]);
-                for (int j=0; j<256; j++) avg_hist[j] += hist[j];
+            for (int h=0; h<K[c][i].size(); h++) {
+                std::vector<float> hist = this->create_histogram(K[c][i][h]);
+                for (int l=0; l<256; l++) avg_hist[l] = avg_hist[l] + hist[l];
             }
-            for (int j=0; j<256; j++) avg_hist[j] = avg_hist[j] / this->N;
-            sum += this->get_euclidean_distance(avg_hist, center_hist);
+            for (int h=0; h<256; h++) avg_hist[h] = avg_hist[h] / this->N;
+            sum += this->get_euclidean_distance(center_hist, avg_hist);
         }
         divided += sum;
     }
+
+
+//
+//    float kn = this->S.size() / this->Ni;
+//    std::cout << divided/this->divide << " " << kn << " " << (divided/this->divide)+kn  << std::endl;
     
-    float kn = this->clusters.size() / this->Ni;
-    std::cout << divided/this->divide << " " << kn << std::endl;
+//    多分これが正しい
+//    for (int c=0; c<K.size(); c++) {
+//        double tmp = 0.0;
+//        for (int i=0; i<K[c].size(); i++) {
+//            int center_frame_num = K[c][i][3];
+//            std::vector<float> center_hist = this->create_histogram(center_frame_num);
+//            std::vector<float> avg_hist(256);
+//            for (int j=0; j<H[c].size(); j++) for (int h=0; h<256; h++) avg_hist[h] += H[c][j][h];
+//            for (int h=0; h<256; h++) avg_hist[h] = avg_hist[h] / this->N;
+//            tmp += this->get_euclidean_distance(center_hist, avg_hist);
+//        }
+//        divided += tmp;
+//    }
+    float kn = this->S.size() / this->Ni;
+    std::cout << divided/this->divide << " " << kn << " " << divided/this->divide+kn  << std::endl;
+    this->Jresult.push_back(((divided/this->divide)-1)+kn);
 }
 
 void Jclustring::update_cluster(){
     //    クラスター数を計算する　クラスタのみ抽出
     this->clusters = {};
     for (int c=0; c<K.size(); c++) {
-//        if (K[c].size() != 1){
             std::vector<std::vector<float>> tmp_two;
             for (int i=0; i<K[c].size(); i++) {
                 std::vector<float> tmp;
@@ -88,15 +220,7 @@ void Jclustring::update_cluster(){
                 tmp_two.push_back(tmp);
             }
             this->clusters.push_back(tmp_two);
-//        }
     }
-    
-    //    for (int i=0; i<this->clusters.size(); i++) {
-    //        std::cout << "clusters[i] " << clusters[i].size() << std::endl;
-    //        for (int j=0; j<clusters[i].size(); j++) {
-    //            std::cout << "clusters[i][j] " << clusters[i][j].size() << std::endl;
-    //        }
-    //    }
 }
 
 float Jclustring::get_euclidean_distance(std::vector<float> hist, std::vector<float> hist_two){
@@ -105,7 +229,7 @@ float Jclustring::get_euclidean_distance(std::vector<float> hist, std::vector<fl
     return sqrt(d);
 }
 
-void Jclustring::marge(cv::Point2i index){
+cv::Point2i Jclustring::marge(cv::Point2i index){
     int index_one = index.x;
     int index_two = index.y;
     int N_i = this->S[index_one].size()/2; //iクラスタのショット数
@@ -129,6 +253,11 @@ void Jclustring::marge(cv::Point2i index){
     //  キーフレームの更新
     this->K[index_one].insert(this->K[index_one].end(), this->K[index_two].begin(), this->K[index_two].end());
     K.erase(K.begin() + index_two);
+    if (index_one > index_two) {
+        index.x = index.x - 1;
+        return index;
+    }
+    return index;
 }
 
 
@@ -166,7 +295,7 @@ void Jclustring::read_shot_file(){
     int number = 0;
     std::vector<int> tmp;
     while (input_file >> number) tmp.push_back(int(number));
-    for (int i=1; i<tmp.size(); i++) this->S.push_back({tmp[i-1], tmp[i]-1});
+    for (int i=1; i<tmp.size(); i++) this->S.push_back({tmp[i-1]+1, tmp[i]-1});
     input_file.close();
 }
 
@@ -265,7 +394,7 @@ cv::Point2i Jclustring::combination_min(){
     cv::Point2d result = {0.0, 0.0};
     for (int i=0; i<this->H.size(); i++) {
         for (int j=i; j<this->H.size(); j++) {
-            if (i!=j) {
+            if (i!=j and H[i].size()==1 and H[j].size()==1) {
                 std::vector<std::vector<float>> hist_one = this->H[i];
                 std::vector<std::vector<float>> hist_two = this->H[j];
                 float dst = this->get_histogram_distance(hist_one, hist_two);
@@ -280,13 +409,22 @@ cv::Point2i Jclustring::combination_min(){
     return result;
 }
 
-//    最短の二つのシーンを一つのシーンクラスタに結合する　sl = (si, sj)
-void Jclustring::marge_two_scenes(int i, int j){
-    
-}
 
-//    結合された二つのシーンヒストグラムを計算する
-void Jclustring::marge_two_hist(std::vector<double> si_hist, std::vector<double> sj_hist,  int si_scene_num, int sj_scene_num){
-    
-}
+cv::Point2i Jclustring::combination_min_index(cv::Point2i index){
+    float min = 1000000;
+    cv::Point2d result = {0.0, 0.0};
 
+    for (int i=0; i<this->H.size(); i++) {
+        if(index.x != i){
+            std::vector<std::vector<float>> hist_one = this->H[i];
+            std::vector<std::vector<float>> hist_two = this->H[index.x];
+            float dst = this->get_histogram_distance(hist_one, hist_two);
+            if (min > dst) {
+                min = dst;
+                result.x = index.x;
+                result.y = i;
+            }
+        }
+    }
+    return result;
+}
