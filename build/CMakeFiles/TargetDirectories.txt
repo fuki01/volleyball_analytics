@@ -1,3 +1,0 @@
-/Users/fuki/src/j-base-clustring/build/CMakeFiles/rebuild_cache.dir
-/Users/fuki/src/j-base-clustring/build/CMakeFiles/edit_cache.dir
-/Users/fuki/src/j-base-clustring/build/CMakeFiles/j-base-clustring.dir
